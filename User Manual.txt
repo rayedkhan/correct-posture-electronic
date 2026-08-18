@@ -1,8 +1,0 @@
-User Manual
-
-1. Collocate the strap (tightly) around your chest and place the device in the middle of the sternum.
-2. Switch on the device and follow instructions on screen to record your reference posture.
-3. The display remains green for as long as the posture is right.
-4. The display turns red IMMEDIATELY when in an incorrect posture, and puts out a vibration and a beep sound to alert you in case you maintain an incorrect posture for any greater than five seconds.
-6. Switch off the device when done using (also shuts down program automatically).
-
