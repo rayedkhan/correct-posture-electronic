@@ -12,7 +12,7 @@ The Core2 boots, shows the instructions, beeps, and waits. Press any of the thre
 
 From then on the loop samples the IMU every 10 ms and compares. Inside the tolerance window the screen is green. Outside it the screen turns red immediately, which is the cheap feedback: glance down, correct, done. Only if you hold the bad angle for more than five seconds does it escalate to a vibration pulse and a beep, then reset the timer and start counting again.
 
-The tolerance window is 25 degrees below the baseline and 10 above (`TOLERANCE_BELOW` and `TOLERANCE_ABOVE` in the sketch). The five second delay is the part that makes it wearable. Without it the thing fires every time you reach for a mug.
+The tolerance window is deliberately lopsided: 25 degrees below the baseline and 10 above (`TOLERANCE_BELOW` and `TOLERANCE_ABOVE` in the sketch). Deviating one way is a posture worth flagging, the other way much less so, so a symmetric window would have been the wrong shape. The five second delay is the part that makes it wearable. Without it the thing fires every time you reach for a mug.
 
 Two implementation notes. The five second timer is the Core2's real-time clock, reset on every good reading, so "seconds elapsed" is just the RTC's own second counter. And the beep is 120 KB of raw 44.1 kHz PCM compiled into the binary as a byte array (`beep_audio.c`) and pushed straight out over I2S, which is blunt but it means no SD card and no decoder.
 
