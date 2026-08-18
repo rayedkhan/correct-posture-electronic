@@ -1,0 +1,14 @@
+# Arduino IDE build output
+build/
+*.hex
+*.bin
+*.elf
+*.map
+
+# Arduino IDE / CLI local settings
+.vscode/
+*.local.h
+sketch.json
+
+# macOS
+.DS_Store
